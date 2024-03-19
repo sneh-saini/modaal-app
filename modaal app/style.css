@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(31, 27, 27);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-wrapper{
+    position: relative;
+    height: 55%;
+    width: 23%;
+    opacity: 80%;
+    background-color: rgb(34, 32, 32);
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgb(63, 60, 65);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle1{
+    position: fixed;
+    top: 5%;
+    left: 35%;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0 0 56px red;
+    background-color: rgba(245, 19, 19, 0.808);
+    animation: circle1Animate 15s infinite;
+}
+
+@keyframes circle1Animate {
+    50%{
+        left: 33%;
+        scale: 1.11;
+    }
+}
+
+.circle2{
+    position: fixed;
+    border-radius: 50%;
+    height: 12em;
+    width: 12em;
+    box-shadow: 0 0 56px rgb(123, 11, 175);
+    bottom: 10px;
+    right: 340px;
+    background-color: rgba(110, 41, 175, 0.712);
+    animation: circle2Animate 15s infinite;
+
+}
+
+@keyframes circle2Animate{
+    50%{
+        bottom: 10px; 
+        scale: 1.11;
+    }
+}
+
+
+
+.img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 60%;
+}
+
+.user-name h2{
+ 
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin-top: -45%;
+}
+
+
+.designation h3{
+
+    color: rgba(255, 255, 255, 0.397);
+    margin-top: -20%;
+}
+
+.btn-grp{
+    display: flex;
+    margin: 2px;
+    padding: 20px;
+    gap: 9px;
+}
+.btn-follow{
+    text-transform: capitalize;
+    padding: 5px;
+    margin: 0px;
+    
+    background: rgb(110, 158, 83);
+    border: 2px solid rgb(63, 148, 42);
+    border-radius: 4px;
+    color: rgb(27, 28, 29);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-share{
+    text-transform: capitalize;
+    background: rgb(110, 158, 83);
+    border: 2px solid rgb(63, 148, 42);
+    border-radius: 4px;
+    color: rgb(27, 28, 29);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-card:hover{
+    background: rgb(41, 155, 57);
+    color: rgb(25, 54, 5);
+}
+
+.modaal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    scale: 0;
+    border: 2px solid rgb(59, 54, 54);
+    width: 500px;
+    height: 180px;
+    background: blanchedalmond;
+    backdrop-filter: blur(10px);
+    color: black;
+    z-index: 1;
+    padding: 20px 25px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.modaal-header{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    border-bottom: 2px solid;
+    padding: 2px;
+}
+
+h3{
+    padding: 5px;
+    top: 50%;
+}
+
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+    font-size: 35px;
+}
+
+#whatsapp{
+    color: rgb(16, 212, 16);
+    border: 1px rgb(218, 221, 218);
+}
+
+#whatsapp:hover{
+    background-color: green;
+    color: rgb(255, 255, 255);
+    
+}
+
+#instagram{
+    color: red;
+    border: 1px red;
+    
+}
+
+#instagram:hover{
+    background-color: rgb(214, 107, 107);
+    border: 1px rgb(248, 247, 247);
+    
+    
+}
+
+#telegram{
+    color: rgb(16, 199, 16);
+    border: 1px green;
+}
+
+#telegram:hover{
+    background-color: green;
+    color: rgb(255, 255, 255);
+    
+}
+
+#github{
+    color: rgb(7, 7, 7);
+    border: 1px rgb(10, 10, 10);
+    
+}
+
+#github:hover{
+    background-color: rgb(105, 99, 99);
+    border: 1px rgb(20, 20, 20);
+    
+    
+}
+
+#linkedin{
+    color: rgb(30, 146, 212);
+    border: 1px rgb(10, 10, 10);
+    
+}
+
+#linkedin:hover{
+    background-color: rgb(165, 200, 214);
+    border: 1px rgb(20, 20, 20);
+    
+    
+}
+
+.active{
+    scale: 1;
+}
+
+.overlay{
+    position: fixed;
+    background-color: rgba(126, 116, 116, 0.616);
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+
+.overlayactive{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+@media (max-width: 850px){
+    .card-wrapper{
+        max-width: 250px;
+        width: 300px;
+    }
+
+    .btn-grp{
+        flex-direction: column;
+    }
+
+    .modaal{
+        width: 70vw;
+    }
+}
